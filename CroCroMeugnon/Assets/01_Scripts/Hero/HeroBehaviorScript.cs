@@ -9,6 +9,7 @@ public class HeroBehaviorScript : MonoBehaviour
 
     NavMeshAgent navAgent;
     SpriteRenderer sr;
+    Rigidbody2D rb;
 
     public float speed;
     public float baseSpeed = 2.0f;
@@ -42,6 +43,7 @@ public class HeroBehaviorScript : MonoBehaviour
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
         sr = GetComponentInChildren<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         currentTargetDistance = 100.0f;
         hasTarget = false;
     }
@@ -98,11 +100,14 @@ public class HeroBehaviorScript : MonoBehaviour
         if (hasTarget && currentTarget != null)
         {
             navAgent.SetDestination(currentTarget.transform.position);
+            sr.flipX = ((currentTarget.transform.position.x - currentPosition.x) > 0)?false: true ;
         }
         else
         {
             navAgent.ResetPath();
             transform.Translate(moveDirection * Time.deltaTime);
+            sr.flipX = ((moveDirection.x - currentPosition.x) > 0) ? false : true;
         }
+
     }
 }

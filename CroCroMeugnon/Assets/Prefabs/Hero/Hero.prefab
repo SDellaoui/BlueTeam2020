@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  baseSpeed: 2
-  chaseSpeed: 3
+  baseSpeed: 5
+  chaseSpeed: 10
   minTime: 1
   maxTime: 3
   minDistanceToTarget: 7
@@ -83,7 +83,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.05
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2284035561036066558}
   - component: {fileID: 2284035561036066553}
   - component: {fileID: 2137693531454488194}
+  - component: {fileID: 6715727625721076859}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -165,8 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: -1519756621
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4653201400166634063, guid: 9ddd870b99233bc4fbc12b2fbea3ede4,
-    type: 3}
+  m_Sprite: {fileID: 496731519810581259, guid: 657771a42c819bc4f88492bbeb582ee6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -193,3 +193,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!95 &6715727625721076859
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284035561036066559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb778ceba3680c846b6dc540f504f0ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
