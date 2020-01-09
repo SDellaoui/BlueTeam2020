@@ -70,7 +70,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!195 &-4294008851384977240
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4315214895029134555}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.25
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -89,8 +89,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.5
-  m_BaseOffset: 0.25
+  m_Height: 0.48
+  m_BaseOffset: 0.19
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &4315214895828926424
@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 4315214895828926424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4315214895029134565}
   m_RootOrder: 0
@@ -163,8 +163,9 @@ SpriteRenderer:
   m_SortingLayerID: -361383813
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.9072835, b: 0, a: 1}
+  m_Sprite: {fileID: 8800662314291473953, guid: 15cdefd60bd0b6040bd69f1b95468e12,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -187,6 +188,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02, y: 0.04}
   serializedVersion: 2
-  m_Radius: 0.11
+  m_Radius: 0.24

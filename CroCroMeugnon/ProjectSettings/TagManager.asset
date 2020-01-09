@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Corpse
+  - Hero
+  - Minion
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - Player
   - Prop
   - Wall
-  - 
-  - 
+  - Corpse
+  - Dino
   - 
   - 
   - 
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 2617832021
+    locked: 0
+  - name: Dino
+    uniqueID: 2775210675
     locked: 0

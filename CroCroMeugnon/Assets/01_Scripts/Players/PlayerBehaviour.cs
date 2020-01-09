@@ -77,9 +77,20 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 8 && playerState == PlayerState.Dead)
+        if (collision.gameObject.layer == 8 && playerState == PlayerState.Dead)
         {
             Destroy(gameObject);
         }
+        else if (collision.gameObject.layer == 11 && playerState == PlayerState.Small)
+        {
+            SetPlayerState(PlayerState.Big);
+            Destroy(collision.gameObject);
+        }
+    }
+    public void Die()
+    {
+        SetPlayerState(PlayerState.Dead);
+        Instantiate(GameManager.Instance.minionDeadPrefab, transform.position,Quaternion.identity);
+        Destroy(gameObject);
     }
 }

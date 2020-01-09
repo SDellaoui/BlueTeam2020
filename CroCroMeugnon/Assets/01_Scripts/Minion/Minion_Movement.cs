@@ -65,6 +65,7 @@ public class Minion_Movement : MonoBehaviour
         {
             if (gameObject != null)
             {
+                Instantiate(GameManager.Instance.minionDeadPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

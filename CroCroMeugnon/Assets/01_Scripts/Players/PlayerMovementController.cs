@@ -79,7 +79,7 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetAxis("Dash" + playerNum.ToString()) >= 0.2f && !preventDash)
             {
                 dashDirection = moveDirection * dashSpeed;
-                sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y/5);
+                sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y/2);
                 isDashing = true;
 
                 Debug.Log("Start Dash !");

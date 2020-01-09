@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }              
+    public static GameManager Instance { get; private set; }
 
- 
+    public GameObject minionDeadPrefab;
     private void Awake()     {
         if (Instance == null) 
         {
