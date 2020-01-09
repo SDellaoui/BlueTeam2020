@@ -20,12 +20,16 @@ public class PlayerBehaviour : MonoBehaviour
     Sprite[] playerSmallSprite;
     Sprite[] playerBigSprite;
     Sprite[] playerDeadSprite;
-    
+    Sprite[] playerDashSmall;
+    Sprite[] playerDashBig;
+
     // Start is called before the first frame update
     void Start()
     {
         playerSmallSprite = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString());
         playerBigSprite = Resources.LoadAll<Sprite>("Sprites/Giant_Player" + playerNum.ToString());
+        playerDashSmall = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString()+"_dash");
+        playerDashBig = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString() + "Big_dash");
         playerDeadSprite = Resources.LoadAll<Sprite>("Sprites/Dead_minion");
         spriteRenderers[0].sprite = playerSmallSprite[0];
         spriteRenderers[1].sprite = playerBigSprite[0];
@@ -93,5 +97,18 @@ public class PlayerBehaviour : MonoBehaviour
         SetPlayerState(PlayerState.Dead);
         Instantiate(GameManager.Instance.minionDeadPrefab, transform.position,Quaternion.identity);
         Destroy(gameObject);
+    }
+    public void StartDashSprite(bool flip = false)
+    {
+        spriteRenderers[0].sprite = playerDashSmall[0];
+        spriteRenderers[1].sprite = playerDashBig[0];
+
+        spriteRenderers[0].flipX = flip;
+        spriteRenderers[1].flipX = flip;
+    }
+    public void EndDashSprite()
+    {
+        spriteRenderers[0].sprite = playerSmallSprite[0];
+        spriteRenderers[1].sprite = playerBigSprite[0];
     }
 }

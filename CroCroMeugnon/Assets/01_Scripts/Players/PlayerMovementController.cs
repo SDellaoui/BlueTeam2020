@@ -79,7 +79,16 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetAxis("Dash" + playerNum.ToString()) >= 0.2f && !preventDash)
             {
                 dashDirection = moveDirection * dashSpeed;
-                sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y/2);
+                //sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y/2);
+                if(moveDirection.x >= 0)
+                {
+                    GetComponent<PlayerBehaviour>().StartDashSprite();
+                }
+                else
+                {
+                    GetComponent<PlayerBehaviour>().StartDashSprite(true);
+                }
+                
                 isDashing = true;
 
                 Debug.Log("Start Dash !");
@@ -93,7 +102,8 @@ public class PlayerMovementController : MonoBehaviour
         isDashing = false;
         preventDash = true;
         dashTime = startDashTime;
-        sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y);
+        //sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y);
+        GetComponent<PlayerBehaviour>().EndDashSprite();
         Debug.Log("StopDash");
     }
     public Vector2 GetDashDirection()
