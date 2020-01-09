@@ -81,9 +81,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (collision.gameObject.layer == 11 && playerState == PlayerState.Small)
+        else if (collision.gameObject.layer == 11)
         {
-            SetPlayerState(PlayerState.Big);
+            if(playerState == PlayerState.Small)
+                SetPlayerState(PlayerState.Big);
             Destroy(collision.gameObject);
         }
     }
