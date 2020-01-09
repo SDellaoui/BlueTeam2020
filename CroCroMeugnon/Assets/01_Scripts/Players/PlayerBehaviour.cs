@@ -16,12 +16,20 @@ public class PlayerBehaviour : MonoBehaviour
     public int mass = 1;
     public float bigStateTime;
     public SpriteRenderer[] spriteRenderers;
-    
-    
+
+    Sprite[] playerSmallSprite;
+    Sprite[] playerBigSprite;
+    Sprite[] playerDeadSprite;
     
     // Start is called before the first frame update
     void Start()
     {
+        playerSmallSprite = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString());
+        playerBigSprite = Resources.LoadAll<Sprite>("Sprites/Giant_Player" + playerNum.ToString());
+        playerDeadSprite = Resources.LoadAll<Sprite>("Sprites/Dead_minion");
+        spriteRenderers[0].sprite = playerSmallSprite[0];
+        spriteRenderers[1].sprite = playerBigSprite[0];
+        spriteRenderers[2].sprite = playerDeadSprite[0];
     }
 
     // Update is called once per frame
@@ -29,7 +37,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         
     }
-
     void SetPlayerState(PlayerState _playerState)
     {
         if(_playerState == PlayerState.Small)
