@@ -18,6 +18,6 @@ public class BossBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        navAgent.SetDestination(target.transform.position);
+        //navAgent.SetDestination(target.transform.position);
     }
 }

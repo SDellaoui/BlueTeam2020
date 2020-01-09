@@ -6,7 +6,7 @@ public class PlayerMovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     public SpriteRenderer sprite;
-    public int playerNum = 1;
+    
     public float speed;
     public float dashSpeed;
     public float startDashTime;
@@ -19,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour
     bool preventDash = false;
     float inputDeadZone = 0f;
 
+    int playerNum;
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 dashDirection;
     private Vector2 spriteScale;
@@ -26,10 +27,12 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerNum = GetComponent<PlayerBehaviour>().playerNum;
         rb = GetComponent<Rigidbody2D>();
         dashTime = startDashTime;
         dashCooldown = dashCooldownTime;
         spriteScale = sprite.transform.localScale;
+        
     }
 
     // Update is called once per frame

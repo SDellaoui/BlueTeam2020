@@ -7,6 +7,7 @@ public class DashBehaviour : MonoBehaviour
     Rigidbody2D rb;
 
     PlayerMovementController playerMovementController;
+    PlayerBehaviour playerBehaviour;
     Vector2 dashedDirection;
     Vector2 dashedPosition;
     float startDashedTime = 0.25f;
@@ -26,7 +27,7 @@ public class DashBehaviour : MonoBehaviour
         if (playerMovementController.GetIsDashed())
         {
             Debug.Log(gameObject.name+" dashed ! ");
-            rb.velocity = dashedDirection * 850 * Time.fixedDeltaTime;
+            rb.velocity = dashedDirection * playerMovementController.dashSpeed * Time.fixedDeltaTime;
             dashedTime -= Time.fixedDeltaTime;
             if(dashedTime <= 0f)
             {
