@@ -312,6 +312,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2264471329954154567, guid: 9662003d9c4a0fd4a8107e1a68841817,
+        type: 3}
+      propertyPath: bigStateTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5786357514423440724, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}
       propertyPath: m_Name
@@ -320,17 +325,17 @@ PrefabInstance:
     - target: {fileID: 5786357514423440725, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3344567
+      value: 3.501
       objectReference: {fileID: 0}
     - target: {fileID: 5786357514423440725, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.010538113
+      value: 0.495
       objectReference: {fileID: 0}
     - target: {fileID: 5786357514423440725, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5786357514423440725, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}

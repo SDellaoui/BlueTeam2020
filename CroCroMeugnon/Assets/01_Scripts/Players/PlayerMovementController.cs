@@ -57,11 +57,7 @@ public class PlayerMovementController : MonoBehaviour
                 moveDirection = Vector2.zero;
             else
                 moveDirection = moveDirection.normalized * ((moveDirection.magnitude - inputDeadZone) / (1 - inputDeadZone));
-            /*
-            float move_X = (Mathf.Abs(Input.GetAxis("Horizontal" + playerNum.ToString())) < inputDeadZone) ? 0f : Input.GetAxis("Horizontal" + playerNum.ToString());
-            float move_Y = (Mathf.Abs(Input.GetAxis("Vertical" + playerNum.ToString())) < inputDeadZone) ? 0f : Input.GetAxis("Vertical" + playerNum.ToString());
-            moveDirection = new Vector2(move_X, move_Y);
-            */
+
             rb.velocity = moveDirection * speed * Time.fixedDeltaTime;
 
             if (preventDash)

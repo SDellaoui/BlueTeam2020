@@ -38,6 +38,7 @@ public class DashBehaviour : MonoBehaviour
     void OnCollisionEnter2D(Collision2D hit)
     {
         if (hit.gameObject.layer == 8){
+            //Collision avec un autre joueur
             PlayerMovementController collPlayerMovementManager = hit.gameObject.GetComponent<PlayerMovementController>();
         
             if (collPlayerMovementManager.GetIsDashing() && !playerMovementController.GetIsDashing())
@@ -49,6 +50,7 @@ public class DashBehaviour : MonoBehaviour
             }
         }
         else if(hit.gameObject.layer == 10){
+            //Collision avec un mur
             playerMovementController.CancelDash();
         }
     }
