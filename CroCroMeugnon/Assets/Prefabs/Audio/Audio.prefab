@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &391083464
+--- !u!1 &5419840231108763914
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 391083465}
-  - component: {fileID: 391083467}
-  - component: {fileID: 391083466}
+  - component: {fileID: 5419840231108763913}
+  - component: {fileID: 5419840231108763911}
+  - component: {fileID: 5419840231108763912}
+  - component: {fileID: 5419840231108763910}
   m_Layer: 0
-  m_Name: DinoGulp
+  m_Name: Music_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &391083465
+--- !u!4 &5419840231108763913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391083464}
+  m_GameObject: {fileID: 5419840231108763914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8496617632158308708}
-  m_RootOrder: 3
+  m_Father: {fileID: 5419840232704688212}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &391083467
+--- !u!114 &5419840231108763911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391083464}
+  m_GameObject: {fileID: 5419840231108763914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -72,7 +73,7 @@ MonoBehaviour:
   _overrideFadeProperties: 0
   _fadeInTime: 0
   _fadeInCurve: 0.5
-  _fadeOutTime: 0
+  _fadeOutTime: 0.1
   _fadeOutCurve: 0.5
   _reverbZoneMix: 1
   _overrideBypassProperties: 0
@@ -104,7 +105,7 @@ MonoBehaviour:
     _velocity: 0
   _overrideSpatializeProperty: 0
   _probability: 100
-  _multipleInstancesPerGameObject: 1
+  _multipleInstancesPerGameObject: 0
   _componentVirtualization: 0
   _overrideVolumeThreshold: 0
   _volumeThreshold: 1
@@ -115,7 +116,7 @@ MonoBehaviour:
   Guid: 
   _componentHolder: {fileID: 0}
   _onEventNotifyEventName: 
-  _audioClip: {fileID: 8300000, guid: d8413ebcd3db8904494f0c7543a06db2, type: 3}
+  _audioClip: {fileID: 8300000, guid: 477ed0560e2c90844938faef510fdc44, type: 3}
   _audioClipHandle:
     _audioClipPath: 
     _useAudioClipPath: 1
@@ -125,7 +126,7 @@ MonoBehaviour:
   _audioClipAssetPath: 0
   _delay: 0
   _delayInBeats: 0
-  _loop: 0
+  _loop: 1
   _ignoreNativeLoop: 0
   _randomizeStart: 0
   _randomizeStartPercentage: 100
@@ -149,19 +150,19 @@ MonoBehaviour:
   _syncRegionsWithTempo: 0
   _audioClipTempo: 120
   _regions: []
---- !u!114 &391083466
+--- !u!114 &5419840231108763912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391083464}
+  m_GameObject: {fileID: 5419840231108763914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1137554331, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventName: Gulp
+  _eventName: Game_Start
   _eventID: 0
   _overrideEventTriggerAction: 0
   _overrideParameters:
@@ -183,7 +184,41 @@ MonoBehaviour:
     _transitionToSnapshotData:
       _snapshot: 
       _timeToReach: 0
---- !u!1 &419434017
+--- !u!114 &5419840231108763910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231108763914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Game_Over
+  _eventID: 0
+  _overrideEventTriggerAction: 1
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 1
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0
+--- !u!1 &5419840231352526107
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,8 +226,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 419434018}
-  - component: {fileID: 419434019}
+  - component: {fileID: 5419840231352526106}
+  - component: {fileID: 5419840231352526105}
   m_Layer: 0
   m_Name: Dino_Growl_03
   m_TagString: Untagged
@@ -200,30 +235,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &419434018
+--- !u!4 &5419840231352526106
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419434017}
+  m_GameObject: {fileID: 5419840231352526107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1631593930}
+  m_Father: {fileID: 5419840231908265848}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &419434019
+--- !u!114 &5419840231352526105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419434017}
+  m_GameObject: {fileID: 5419840231352526107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -331,7 +366,7 @@ MonoBehaviour:
   _syncRegionsWithTempo: 0
   _audioClipTempo: 120
   _regions: []
---- !u!1 &464320974
+--- !u!1 &5419840231740105540
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,156 +374,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 464320975}
-  - component: {fileID: 464320976}
-  m_Layer: 0
-  m_Name: Dino_Growl_02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &464320975
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464320974}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1631593930}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &464320976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464320974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numVirtualizationEvents: 100
-  _maxInstances: 1
-  _stealingBehaviour: 0
-  _minimumPlaybackInterval: 0
-  _overrideParentVolume: 0
-  _volume: 1
-  _volumeRandomization: 0
-  _mute: 0
-  _overrideParentPitch: 0
-  _pitch: 1
-  _pitchRandomization: 0
-  _override2DProperties: 0
-  _pan2D: 0
-  _pan2DRandomization: 0
-  _override3DProperties: 0
-  _priority: 128
-  _panLevel: 1
-  _spreadLevel: 0
-  _spatialize: 0
-  _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
-  _rolloffMode: 0
-  _customCurvesType: 0
-  _customCurvesName: 
-  _overrideFadeProperties: 0
-  _fadeInTime: 0
-  _fadeInCurve: 0.5
-  _fadeOutTime: 0
-  _fadeOutCurve: 0.5
-  _reverbZoneMix: 1
-  _overrideBypassProperties: 0
-  _bypassEffects: 0
-  _bypassListenerEffects: 0
-  _bypassReverbZones: 0
-  _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 0}
-  _notifyParentComponent: 0
-  _audioBusName: 
-  _overrideAudioBus: 0
-  _overrideMusicTimeSettings: 0
-  _musicTimeSettingsIndex: -1
-  _musicTempo: -1
-  _musicTimeSignatureLower: 0
-  _musicTimeSignatureUpper: 0
-  _musicTimeResetOnPlay: 0
-  _midiProperties:
-    _overrideParentNoteTracking: 0
-    _noteTracking: 0
-    _keyRangeMin: 0
-    _keyRangeMax: 127
-    _velocityRangeMin: 0
-    _velocityRangeMax: 127
-    _channelRangeMin: 1
-    _channelRangeMax: 16
-    _rootNote: -36
-    _transpose: 0
-    _velocity: 0
-  _overrideSpatializeProperty: 0
-  _probability: 100
-  _multipleInstancesPerGameObject: 1
-  _componentVirtualization: 0
-  _overrideVolumeThreshold: 0
-  _volumeThreshold: 1
-  _virtualizationBehavior: 1
-  _RTPManager:
-    _parameters: []
-    _reference: {fileID: 0}
-  Guid: 
-  _componentHolder: {fileID: 0}
-  _onEventNotifyEventName: 
-  _audioClip: {fileID: 8300000, guid: 577a6ae95ff29384696c3b47b738bd0f, type: 3}
-  _audioClipHandle:
-    _audioClipPath: 
-    _useAudioClipPath: 1
-  _dynamicAudioClipLoading: 0
-  _dynamicAudioClipUnloadDelay: 0
-  _dynamicAsyncAudioClipLoading: 0
-  _audioClipAssetPath: 0
-  _delay: 0
-  _delayInBeats: 0
-  _loop: 0
-  _ignoreNativeLoop: 0
-  _randomizeStart: 0
-  _randomizeStartPercentage: 100
-  _numLoops: -1
-  _loopMarkersLoaded: 0
-  _useLoopMarkers: 1
-  _startLoopMarkerIndex: 0
-  _endLoopMarkerIndex: 1
-  _loopRegionIndex: 0
-  _randomizeStartLoopMarkerIndex: 0
-  _randomizeEndLoopMarkerIndex: 0
-  _randomizeRegionIndex: 0
-  _dontPlay: 0
-  _dontStopOnDestroy: 0
-  _ignoreVirtualization: 0
-  _randomizePosition: 0
-  _randomizeMinPosition: 0
-  _randomizeMaxPosition: 10
-  _syncWithMusicTime: 0
-  _markers: []
-  _syncRegionsWithTempo: 0
-  _audioClipTempo: 120
-  _regions: []
---- !u!1 &638000806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 638000807}
-  - component: {fileID: 638000808}
+  - component: {fileID: 5419840231740105539}
+  - component: {fileID: 5419840231740105538}
   m_Layer: 0
   m_Name: Dino_Growl_01
   m_TagString: Untagged
@@ -496,30 +383,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &638000807
+--- !u!4 &5419840231740105539
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638000806}
+  m_GameObject: {fileID: 5419840231740105540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1631593930}
+  m_Father: {fileID: 5419840231908265848}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &638000808
+--- !u!114 &5419840231740105538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638000806}
+  m_GameObject: {fileID: 5419840231740105540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -627,7 +514,7 @@ MonoBehaviour:
   _syncRegionsWithTempo: 0
   _audioClipTempo: 120
   _regions: []
---- !u!1 &1631593929
+--- !u!1 &5419840231782188660
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -635,545 +522,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1631593930}
-  - component: {fileID: 1631593933}
-  - component: {fileID: 1631593932}
-  - component: {fileID: 1631593931}
+  - component: {fileID: 5419840231782188659}
+  - component: {fileID: 5419840231782188658}
   m_Layer: 0
-  m_Name: DinoGrawl
+  m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1631593930
+--- !u!4 &5419840231782188659
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631593929}
+  m_GameObject: {fileID: 5419840231782188660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 638000807}
-  - {fileID: 464320975}
-  - {fileID: 419434018}
-  - {fileID: 1760563119}
-  m_Father: {fileID: 8496617632158308708}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1631593933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631593929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1955756232, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numVirtualizationEvents: 100
-  _maxInstances: 1
-  _stealingBehaviour: 0
-  _minimumPlaybackInterval: 0
-  _overrideParentVolume: 0
-  _volume: 1
-  _volumeRandomization: 0
-  _mute: 0
-  _overrideParentPitch: 0
-  _pitch: 1
-  _pitchRandomization: 0
-  _override2DProperties: 0
-  _pan2D: 0
-  _pan2DRandomization: 0
-  _override3DProperties: 0
-  _priority: 128
-  _panLevel: 1
-  _spreadLevel: 0
-  _spatialize: 0
-  _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
-  _rolloffMode: 0
-  _customCurvesType: 0
-  _customCurvesName: 
-  _overrideFadeProperties: 0
-  _fadeInTime: 0
-  _fadeInCurve: 0.5
-  _fadeOutTime: 0
-  _fadeOutCurve: 0.5
-  _reverbZoneMix: 1
-  _overrideBypassProperties: 0
-  _bypassEffects: 0
-  _bypassListenerEffects: 0
-  _bypassReverbZones: 0
-  _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 0}
-  _notifyParentComponent: 0
-  _audioBusName: 
-  _overrideAudioBus: 0
-  _overrideMusicTimeSettings: 0
-  _musicTimeSettingsIndex: -1
-  _musicTempo: -1
-  _musicTimeSignatureLower: 0
-  _musicTimeSignatureUpper: 0
-  _musicTimeResetOnPlay: 0
-  _midiProperties:
-    _overrideParentNoteTracking: 0
-    _noteTracking: 0
-    _keyRangeMin: 0
-    _keyRangeMax: 127
-    _velocityRangeMin: 0
-    _velocityRangeMax: 127
-    _channelRangeMin: 1
-    _channelRangeMax: 16
-    _rootNote: -36
-    _transpose: 0
-    _velocity: 0
-  _overrideSpatializeProperty: 0
-  _probability: 100
-  _multipleInstancesPerGameObject: 1
-  _componentVirtualization: 0
-  _overrideVolumeThreshold: 0
-  _volumeThreshold: 1
-  _virtualizationBehavior: 1
-  _RTPManager:
-    _parameters: []
-    _reference: {fileID: 0}
-  Guid: 
-  _componentHolder: {fileID: 0}
-  _onEventNotifyEventName: 
-  _playMode: 1
-  _randomWeights: 64000000640000006400000064000000
-  _looped: 1
-  _delayOnFirstPlay: 0
-  _triggerMode: 0
-  _delay: 5
-  _delayRandomization: 0
-  _delayMaxRandomization: 3
-  _shareRandomNoRepeatHistory: 0
---- !u!114 &1631593932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631593929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc407e8679377004daddc5b6528d658c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1631593931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631593929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1137554331, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eventName: Dino_Grawl
-  _eventID: 0
-  _overrideEventTriggerAction: 0
-  _overrideParameters:
-    _overrideIncomingEventAction: 0
-    _incomingEventAction: 0
-    _overrideEventAction: 0
-    _type: 0
-    _floatParameter: 1
-    _stringParameter: 
-    _switchPresetData:
-      _sourcePreset: 
-      _targetPreset: 
-    _dspParameterData:
-      _dspType: 0
-      _parameter: 
-      _value: 0
-      _time: 0
-      _curve: 0.5
-    _transitionToSnapshotData:
-      _snapshot: 
-      _timeToReach: 0
---- !u!1 &1713452700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1713452701}
-  - component: {fileID: 1713452703}
-  - component: {fileID: 1713452702}
-  m_Layer: 0
-  m_Name: DinoChomp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1713452701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713452700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8496617632158308708}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1713452703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713452700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numVirtualizationEvents: 100
-  _maxInstances: 1
-  _stealingBehaviour: 0
-  _minimumPlaybackInterval: 0
-  _overrideParentVolume: 0
-  _volume: 1
-  _volumeRandomization: 0
-  _mute: 0
-  _overrideParentPitch: 0
-  _pitch: 1
-  _pitchRandomization: 0
-  _override2DProperties: 0
-  _pan2D: 0
-  _pan2DRandomization: 0
-  _override3DProperties: 0
-  _priority: 128
-  _panLevel: 1
-  _spreadLevel: 0
-  _spatialize: 0
-  _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
-  _rolloffMode: 0
-  _customCurvesType: 0
-  _customCurvesName: 
-  _overrideFadeProperties: 0
-  _fadeInTime: 0
-  _fadeInCurve: 0.5
-  _fadeOutTime: 0
-  _fadeOutCurve: 0.5
-  _reverbZoneMix: 1
-  _overrideBypassProperties: 0
-  _bypassEffects: 0
-  _bypassListenerEffects: 0
-  _bypassReverbZones: 0
-  _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 0}
-  _notifyParentComponent: 0
-  _audioBusName: 
-  _overrideAudioBus: 0
-  _overrideMusicTimeSettings: 0
-  _musicTimeSettingsIndex: -1
-  _musicTempo: -1
-  _musicTimeSignatureLower: 0
-  _musicTimeSignatureUpper: 0
-  _musicTimeResetOnPlay: 0
-  _midiProperties:
-    _overrideParentNoteTracking: 0
-    _noteTracking: 0
-    _keyRangeMin: 0
-    _keyRangeMax: 127
-    _velocityRangeMin: 0
-    _velocityRangeMax: 127
-    _channelRangeMin: 1
-    _channelRangeMax: 16
-    _rootNote: -36
-    _transpose: 0
-    _velocity: 0
-  _overrideSpatializeProperty: 0
-  _probability: 100
-  _multipleInstancesPerGameObject: 1
-  _componentVirtualization: 0
-  _overrideVolumeThreshold: 0
-  _volumeThreshold: 1
-  _virtualizationBehavior: 1
-  _RTPManager:
-    _parameters: []
-    _reference: {fileID: 0}
-  Guid: 
-  _componentHolder: {fileID: 0}
-  _onEventNotifyEventName: 
-  _audioClip: {fileID: 0}
-  _audioClipHandle:
-    _audioClipPath: 
-    _useAudioClipPath: 1
-  _dynamicAudioClipLoading: 0
-  _dynamicAudioClipUnloadDelay: 0
-  _dynamicAsyncAudioClipLoading: 0
-  _audioClipAssetPath: 0
-  _delay: 0
-  _delayInBeats: 0
-  _loop: 0
-  _ignoreNativeLoop: 0
-  _randomizeStart: 0
-  _randomizeStartPercentage: 100
-  _numLoops: -1
-  _loopMarkersLoaded: 0
-  _useLoopMarkers: 1
-  _startLoopMarkerIndex: 0
-  _endLoopMarkerIndex: 1
-  _loopRegionIndex: 0
-  _randomizeStartLoopMarkerIndex: 0
-  _randomizeEndLoopMarkerIndex: 0
-  _randomizeRegionIndex: 0
-  _dontPlay: 0
-  _dontStopOnDestroy: 0
-  _ignoreVirtualization: 0
-  _randomizePosition: 0
-  _randomizeMinPosition: 0
-  _randomizeMaxPosition: 10
-  _syncWithMusicTime: 0
-  _markers: []
-  _syncRegionsWithTempo: 0
-  _audioClipTempo: 120
-  _regions: []
---- !u!114 &1713452702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713452700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1137554331, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eventName: Stomp
-  _eventID: 0
-  _overrideEventTriggerAction: 0
-  _overrideParameters:
-    _overrideIncomingEventAction: 0
-    _incomingEventAction: 0
-    _overrideEventAction: 0
-    _type: 0
-    _floatParameter: 1
-    _stringParameter: 
-    _switchPresetData:
-      _sourcePreset: 
-      _targetPreset: 
-    _dspParameterData:
-      _dspType: 0
-      _parameter: 
-      _value: 0
-      _time: 0
-      _curve: 0.5
-    _transitionToSnapshotData:
-      _snapshot: 
-      _timeToReach: 0
---- !u!1 &1760563118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1760563119}
-  - component: {fileID: 1760563120}
-  m_Layer: 0
-  m_Name: Dino_Growl_04
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1760563119
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760563118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1631593930}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760563120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760563118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numVirtualizationEvents: 100
-  _maxInstances: 1
-  _stealingBehaviour: 0
-  _minimumPlaybackInterval: 0
-  _overrideParentVolume: 0
-  _volume: 1
-  _volumeRandomization: 0
-  _mute: 0
-  _overrideParentPitch: 0
-  _pitch: 1
-  _pitchRandomization: 0
-  _override2DProperties: 0
-  _pan2D: 0
-  _pan2DRandomization: 0
-  _override3DProperties: 0
-  _priority: 128
-  _panLevel: 1
-  _spreadLevel: 0
-  _spatialize: 0
-  _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
-  _rolloffMode: 0
-  _customCurvesType: 0
-  _customCurvesName: 
-  _overrideFadeProperties: 0
-  _fadeInTime: 0
-  _fadeInCurve: 0.5
-  _fadeOutTime: 0
-  _fadeOutCurve: 0.5
-  _reverbZoneMix: 1
-  _overrideBypassProperties: 0
-  _bypassEffects: 0
-  _bypassListenerEffects: 0
-  _bypassReverbZones: 0
-  _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 0}
-  _notifyParentComponent: 0
-  _audioBusName: 
-  _overrideAudioBus: 0
-  _overrideMusicTimeSettings: 0
-  _musicTimeSettingsIndex: -1
-  _musicTempo: -1
-  _musicTimeSignatureLower: 0
-  _musicTimeSignatureUpper: 0
-  _musicTimeResetOnPlay: 0
-  _midiProperties:
-    _overrideParentNoteTracking: 0
-    _noteTracking: 0
-    _keyRangeMin: 0
-    _keyRangeMax: 127
-    _velocityRangeMin: 0
-    _velocityRangeMax: 127
-    _channelRangeMin: 1
-    _channelRangeMax: 16
-    _rootNote: -36
-    _transpose: 0
-    _velocity: 0
-  _overrideSpatializeProperty: 0
-  _probability: 100
-  _multipleInstancesPerGameObject: 1
-  _componentVirtualization: 0
-  _overrideVolumeThreshold: 0
-  _volumeThreshold: 1
-  _virtualizationBehavior: 1
-  _RTPManager:
-    _parameters: []
-    _reference: {fileID: 0}
-  Guid: 
-  _componentHolder: {fileID: 0}
-  _onEventNotifyEventName: 
-  _audioClip: {fileID: 8300000, guid: 94fe7a3d61c225a4ba724e9e711562b5, type: 3}
-  _audioClipHandle:
-    _audioClipPath: 
-    _useAudioClipPath: 1
-  _dynamicAudioClipLoading: 0
-  _dynamicAudioClipUnloadDelay: 0
-  _dynamicAsyncAudioClipLoading: 0
-  _audioClipAssetPath: 0
-  _delay: 0
-  _delayInBeats: 0
-  _loop: 0
-  _ignoreNativeLoop: 0
-  _randomizeStart: 0
-  _randomizeStartPercentage: 100
-  _numLoops: -1
-  _loopMarkersLoaded: 0
-  _useLoopMarkers: 1
-  _startLoopMarkerIndex: 0
-  _endLoopMarkerIndex: 1
-  _loopRegionIndex: 0
-  _randomizeStartLoopMarkerIndex: 0
-  _randomizeEndLoopMarkerIndex: 0
-  _randomizeRegionIndex: 0
-  _dontPlay: 0
-  _dontStopOnDestroy: 0
-  _ignoreVirtualization: 0
-  _randomizePosition: 0
-  _randomizeMinPosition: 0
-  _randomizeMaxPosition: 10
-  _syncWithMusicTime: 0
-  _markers: []
-  _syncRegionsWithTempo: 0
-  _audioClipTempo: 120
-  _regions: []
---- !u!1 &110422979466189225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6216339285970416704}
-  - component: {fileID: 6679174742055578148}
-  m_Layer: 0
-  m_Name: MusicComponent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6216339285970416704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110422979466189225}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3203704501985526262}
+  - {fileID: 5419840232337790622}
+  - {fileID: 5419840231893425838}
+  - {fileID: 5419840232730057407}
+  - {fileID: 5419840231908265848}
+  m_Father: {fileID: 5419840231804642157}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6679174742055578148
+--- !u!114 &5419840231782188658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110422979466189225}
+  m_GameObject: {fileID: 5419840231782188660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -74605982, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: 45463070, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -1192,13 +577,13 @@ MonoBehaviour:
   _pan2DRandomization: 0
   _override3DProperties: 0
   _priority: 128
-  _panLevel: 1
+  _panLevel: 0.549
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
   _maxDistance: 500
   _minDistance: 1
-  _rolloffMode: 0
+  _rolloffMode: 1
   _customCurvesType: 0
   _customCurvesName: 
   _overrideFadeProperties: 0
@@ -1212,267 +597,7 @@ MonoBehaviour:
   _bypassListenerEffects: 0
   _bypassReverbZones: 0
   _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 0}
-  _notifyParentComponent: 0
-  _audioBusName: 
-  _overrideAudioBus: 0
-  _overrideMusicTimeSettings: 0
-  _musicTimeSettingsIndex: -1
-  _musicTempo: -1
-  _musicTimeSignatureLower: 0
-  _musicTimeSignatureUpper: 0
-  _musicTimeResetOnPlay: 0
-  _midiProperties:
-    _overrideParentNoteTracking: 0
-    _noteTracking: 0
-    _keyRangeMin: 0
-    _keyRangeMax: 127
-    _velocityRangeMin: 0
-    _velocityRangeMax: 127
-    _channelRangeMin: 1
-    _channelRangeMax: 16
-    _rootNote: -36
-    _transpose: 0
-    _velocity: 0
-  _overrideSpatializeProperty: 0
-  _probability: 100
-  _multipleInstancesPerGameObject: 1
-  _componentVirtualization: 0
-  _overrideVolumeThreshold: 0
-  _volumeThreshold: 1
-  _virtualizationBehavior: 1
-  _RTPManager:
-    _parameters: []
-    _reference: {fileID: 0}
-  Guid: 
-  _componentHolder: {fileID: 0}
-  _onEventNotifyEventName: 
-  _transitions: []
-  _defaultComponent: {fileID: 0}
-  _syncToMusicOnFirstPlay: 1
---- !u!1 &404828222404562543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5548952285194187557}
-  - component: {fileID: 6779542163469082998}
-  - component: {fileID: 6497692194008411812}
-  - component: {fileID: 4322227294512870602}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5548952285194187557
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404828222404562543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8242104330994853146}
-  - {fileID: 8496617632158308708}
-  - {fileID: 3203704501985526262}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6779542163469082998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404828222404562543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -139544205, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dontDestroyOnLoad: 1
-  _audioSourcePool: 0
-  _audioSourcePoolFadeInTime: 0
-  _audioSourcePoolFadeOutTime: 0
-  _showAllInstances: 0
-  _enableVirtualization: 0
-  enableTimelineAssetLoader: 0
-  _createEventListeners: 0
-  _useFullPathForEventListeners: 0
-  _transitionThreshold: 0.5
-  _volumeThreshold: 0
-  _audioBusManager:
-    _audioBuses: []
-  _customCurvesManager:
-    _customCurveList: []
-  _enableDebugLog: 0
-  _bakeComponentInstances: 0
-  _allowExternalGroupComponents: 1
-  _forceAxisVector: {x: 0, y: 0, z: 0}
-  _languages: []
-  _activeLanguage: -1
-  _defaultLanguage: -1
-  _sampleManager:
-    _sampleFileList: []
-  _musicTimeSignatures: []
-  _fabricEditorPath: Assets/Fabric/Editor
-  _VRAudioManager:
-    _vrPlatforms:
-      keys: 
-      values: []
-    _vrSolutions: []
-    _defaultVRSolution: 0
-  _audioSourcePoolManager: {fileID: 0}
-  _onApplicationPauseBehavior: 0
-  _checkOnApplicationFocus: 0
-  _enableEditorPreviewer: 0
---- !u!114 &6497692194008411812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404828222404562543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 181790006, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _globalParameterManager:
-    _globalRTParameters:
-      _keys: []
-      _data: []
-    _globalSwitches:
-      _keys: []
-      _data: []
-  _eventList:
-  - _UnSet_
-  - Dash
-  - Dino_Grawl
-  - Dino_Scream
-  - Gulp
-  - Stomp
-  _eventEditor:
-    _eventNames: []
-    _eventList: []
-  profiler:
-    totalMS: 0
-    recordedMS: 0
-    percent: 0
-    msPerFrame: 0
-    maxMsPerFrame: 0
-    msPerCall: 0
-    timesPerFrame: 0
-  _eventMenuListFoldout: 1
-  _eventListFoldout: 0
-  _forceQueueAllEvents: 0
-  _deployWithActiveEventList: 0
-  _eventSequencer:
-    _sequenceEntries:
-      _keys: []
-      _data: []
---- !u!114 &4322227294512870602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404828222404562543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 264398368, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioMixers: []
---- !u!1 &583711018887539350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3203704501985526262}
-  - component: {fileID: 28607390209796485}
-  m_Layer: 0
-  m_Name: MUS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3203704501985526262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583711018887539350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6216339285970416704}
-  m_Father: {fileID: 5548952285194187557}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &28607390209796485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583711018887539350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 45463070, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numVirtualizationEvents: 100
-  _maxInstances: 1
-  _stealingBehaviour: 0
-  _minimumPlaybackInterval: 0
-  _overrideParentVolume: 0
-  _volume: 1
-  _volumeRandomization: 0
-  _mute: 0
-  _overrideParentPitch: 0
-  _pitch: 1
-  _pitchRandomization: 0
-  _override2DProperties: 0
-  _pan2D: 0
-  _pan2DRandomization: 0
-  _override3DProperties: 0
-  _priority: 128
-  _panLevel: 1
-  _spreadLevel: 0
-  _spatialize: 0
-  _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
-  _rolloffMode: 0
-  _customCurvesType: 0
-  _customCurvesName: 
-  _overrideFadeProperties: 0
-  _fadeInTime: 0
-  _fadeInCurve: 0.5
-  _fadeOutTime: 0
-  _fadeOutCurve: 0.5
-  _reverbZoneMix: 1
-  _overrideBypassProperties: 0
-  _bypassEffects: 0
-  _bypassListenerEffects: 0
-  _bypassReverbZones: 0
-  _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: 5249846454751701788, guid: 9961f7c86c026f84aa28b809a1c88412,
+  _audioMixerGroup: {fileID: -1193089823879905821, guid: 9961f7c86c026f84aa28b809a1c88412,
     type: 2}
   _notifyParentComponent: 0
   _audioBusName: None
@@ -1514,7 +639,7 @@ MonoBehaviour:
   _eventEditor:
     _eventNames: []
     _eventList: []
---- !u!1 &2376077844429974967
+--- !u!1 &5419840231804642128
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1522,40 +647,330 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6279800737790770797}
-  - component: {fileID: 2334485281318785360}
-  - component: {fileID: 4830784938246506772}
+  - component: {fileID: 5419840231804642157}
+  - component: {fileID: 5419840231804642158}
+  - component: {fileID: 5419840231804642156}
+  - component: {fileID: 5419840231804642159}
   m_Layer: 0
-  m_Name: DinoScream
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6279800737790770797
+--- !u!4 &5419840231804642157
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2376077844429974967}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 5419840231804642128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8496617632158308708}
+  m_Children:
+  - {fileID: 5419840231782188659}
+  - {fileID: 5419840232704688212}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2334485281318785360
+--- !u!114 &5419840231804642158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2376077844429974967}
+  m_GameObject: {fileID: 5419840231804642128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -71199202, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -139544205, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dontDestroyOnLoad: 1
+  _audioSourcePool: 0
+  _audioSourcePoolFadeInTime: 0
+  _audioSourcePoolFadeOutTime: 0
+  _showAllInstances: 0
+  _enableVirtualization: 0
+  enableTimelineAssetLoader: 0
+  _createEventListeners: 0
+  _useFullPathForEventListeners: 0
+  _transitionThreshold: 0.5
+  _volumeThreshold: 0
+  _audioBusManager:
+    _audioBuses: []
+  _customCurvesManager:
+    _customCurveList: []
+  _enableDebugLog: 0
+  _bakeComponentInstances: 0
+  _allowExternalGroupComponents: 1
+  _forceAxisVector: {x: 0, y: 0, z: 0}
+  _languages: []
+  _activeLanguage: -1
+  _defaultLanguage: -1
+  _sampleManager:
+    _sampleFileList: []
+  _musicTimeSignatures: []
+  _fabricEditorPath: Assets/Fabric/Editor
+  _VRAudioManager:
+    _vrPlatforms:
+      keys: 
+      values: []
+    _vrSolutions: []
+    _defaultVRSolution: 0
+  _audioSourcePoolManager: {fileID: 0}
+  _onApplicationPauseBehavior: 0
+  _checkOnApplicationFocus: 0
+  _enableEditorPreviewer: 0
+--- !u!114 &5419840231804642156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231804642128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 181790006, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _globalParameterManager:
+    _globalRTParameters:
+      _keys: []
+      _data: []
+    _globalSwitches:
+      _keys: []
+      _data: []
+  _eventList:
+  - _UnSet_
+  - Dino_Grawl
+  - Dino_Gulp
+  - Dino_Scream
+  - Dino_Stomp
+  - Game_Over
+  - Game_Start
+  - Player_Dash
+  _eventEditor:
+    _eventNames: []
+    _eventList: []
+  profiler:
+    totalMS: 0
+    recordedMS: 0
+    percent: 0
+    msPerFrame: 0
+    maxMsPerFrame: 0
+    msPerCall: 0
+    timesPerFrame: 0
+  _eventMenuListFoldout: 1
+  _eventListFoldout: 0
+  _forceQueueAllEvents: 0
+  _deployWithActiveEventList: 0
+  _eventSequencer:
+    _sequenceEntries:
+      _keys: []
+      _data: []
+--- !u!114 &5419840231804642159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231804642128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc407e8679377004daddc5b6528d658c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5419840231817020477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840231817020476}
+  - component: {fileID: 5419840231817020475}
+  m_Layer: 0
+  m_Name: Dino_Growl_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840231817020476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231817020477}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5419840231908265848}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840231817020475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231817020477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 1
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _audioClip: {fileID: 8300000, guid: 577a6ae95ff29384696c3b47b738bd0f, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
+--- !u!1 &5419840231893425839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840231893425838}
+  - component: {fileID: 5419840231893425836}
+  - component: {fileID: 5419840231893425837}
+  m_Layer: 0
+  m_Name: Dino_Scream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840231893425838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231893425839}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5419840231782188659}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840231893425836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231893425839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -1663,16 +1078,178 @@ MonoBehaviour:
   _syncRegionsWithTempo: 0
   _audioClipTempo: 120
   _regions: []
---- !u!114 &4830784938246506772
+--- !u!114 &5419840231893425837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2376077844429974967}
+  m_GameObject: {fileID: 5419840231893425839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1137554331, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Dino_Scream
+  _eventID: 0
+  _overrideEventTriggerAction: 0
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 0
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0
+--- !u!1 &5419840231908265849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840231908265848}
+  - component: {fileID: 5419840231908265846}
+  - component: {fileID: 5419840231908265847}
+  m_Layer: 0
+  m_Name: Dino_Growl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840231908265848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231908265849}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5419840231740105539}
+  - {fileID: 5419840231817020476}
+  - {fileID: 5419840231352526106}
+  - {fileID: 5419840232036226876}
+  m_Father: {fileID: 5419840231782188659}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840231908265846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231908265849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1955756232, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 1
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _playMode: 1
+  _randomWeights: 64000000640000006400000064000000
+  _looped: 1
+  _delayOnFirstPlay: 0
+  _triggerMode: 0
+  _delay: 8
+  _delayRandomization: -2
+  _delayMaxRandomization: 2
+  _shareRandomNoRepeatHistory: 0
+--- !u!114 &5419840231908265847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840231908265849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _eventName: Dino_Grawl
@@ -1697,7 +1274,7 @@ MonoBehaviour:
     _transitionToSnapshotData:
       _snapshot: 
       _timeToReach: 0
---- !u!1 &5079720770518260549
+--- !u!1 &5419840232036226877
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1705,39 +1282,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8242104330994853146}
-  - component: {fileID: 4809782436496657541}
+  - component: {fileID: 5419840232036226876}
+  - component: {fileID: 5419840232036226875}
   m_Layer: 0
-  m_Name: UI
+  m_Name: Dino_Growl_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8242104330994853146
+--- !u!4 &5419840232036226876
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079720770518260549}
+  m_GameObject: {fileID: 5419840232036226877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5548952285194187557}
-  m_RootOrder: 0
+  m_Father: {fileID: 5419840231908265848}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4809782436496657541
+--- !u!114 &5419840232036226875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079720770518260549}
+  m_GameObject: {fileID: 5419840232036226877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 45463070, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -1776,10 +1353,9 @@ MonoBehaviour:
   _bypassListenerEffects: 0
   _bypassReverbZones: 0
   _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: -4071254233100664287, guid: 9961f7c86c026f84aa28b809a1c88412,
-    type: 2}
+  _audioMixerGroup: {fileID: 0}
   _notifyParentComponent: 0
-  _audioBusName: None
+  _audioBusName: 
   _overrideAudioBus: 0
   _overrideMusicTimeSettings: 0
   _musicTimeSettingsIndex: -1
@@ -1812,13 +1388,41 @@ MonoBehaviour:
   Guid: 
   _componentHolder: {fileID: 0}
   _onEventNotifyEventName: 
-  _showInMixerView: 1
-  _targetGroupComponentPath: 
-  _ignoreUnloadUnusedAssets: 1
-  _eventEditor:
-    _eventNames: []
-    _eventList: []
---- !u!1 &8820047404676178113
+  _audioClip: {fileID: 8300000, guid: 94fe7a3d61c225a4ba724e9e711562b5, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
+--- !u!1 &5419840232337790623
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1826,43 +1430,224 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8496617632158308708}
-  - component: {fileID: 8064648063741056507}
+  - component: {fileID: 5419840232337790622}
+  - component: {fileID: 5419840232337790620}
+  - component: {fileID: 5419840232337790621}
   m_Layer: 0
-  m_Name: SFX
+  m_Name: Player_Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8496617632158308708
+--- !u!4 &5419840232337790622
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8820047404676178113}
+  m_GameObject: {fileID: 5419840232337790623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6279800737790770797}
-  - {fileID: 1631593930}
-  - {fileID: 1713452701}
-  - {fileID: 391083465}
-  m_Father: {fileID: 5548952285194187557}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 5419840231782188659}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8064648063741056507
+--- !u!114 &5419840232337790620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8820047404676178113}
+  m_GameObject: {fileID: 5419840232337790623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 45463070, guid: 4d98c7e5dc68cf34f9481b968557360e, type: 3}
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 0.46773517
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _audioClip: {fileID: 8300000, guid: 9a8457ed5cacc9349a15e219de04ad0f, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
+--- !u!114 &5419840232337790621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232337790623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Player_Dash
+  _eventID: 0
+  _overrideEventTriggerAction: 0
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 0
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0
+--- !u!1 &5419840232704688213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840232704688212}
+  - component: {fileID: 5419840232704688211}
+  m_Layer: 0
+  m_Name: MUS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840232704688212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232704688213}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5419840231108763913}
+  - {fileID: 5419840233060165090}
+  m_Father: {fileID: 5419840231804642157}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840232704688211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232704688213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 45463070, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _numVirtualizationEvents: 100
@@ -1901,7 +1686,7 @@ MonoBehaviour:
   _bypassListenerEffects: 0
   _bypassReverbZones: 0
   _overrideAudioMixerGroup: 0
-  _audioMixerGroup: {fileID: -1193089823879905821, guid: 9961f7c86c026f84aa28b809a1c88412,
+  _audioMixerGroup: {fileID: 5249846454751701788, guid: 9961f7c86c026f84aa28b809a1c88412,
     type: 2}
   _notifyParentComponent: 0
   _audioBusName: None
@@ -1943,3 +1728,369 @@ MonoBehaviour:
   _eventEditor:
     _eventNames: []
     _eventList: []
+--- !u!1 &5419840232730057376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840232730057407}
+  - component: {fileID: 5419840232730057405}
+  - component: {fileID: 5419840232730057406}
+  m_Layer: 0
+  m_Name: Dino_Gulp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840232730057407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232730057376}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5419840231782188659}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840232730057405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232730057376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 1
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _audioClip: {fileID: 8300000, guid: d8413ebcd3db8904494f0c7543a06db2, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
+--- !u!114 &5419840232730057406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840232730057376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Dino_Gulp
+  _eventID: 0
+  _overrideEventTriggerAction: 0
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 0
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0
+--- !u!1 &5419840233060165091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419840233060165090}
+  - component: {fileID: 5419840233060165088}
+  - component: {fileID: 5419840233060165089}
+  m_Layer: 0
+  m_Name: Music_GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419840233060165090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840233060165091}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5419840232704688212}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5419840233060165088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840233060165091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 1
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _audioClip: {fileID: 8300000, guid: 8c842902cc43dd1478675caaad938e2c, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
+--- !u!114 &5419840233060165089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419840233060165091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Game_Over
+  _eventID: 0
+  _overrideEventTriggerAction: 0
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 0
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0

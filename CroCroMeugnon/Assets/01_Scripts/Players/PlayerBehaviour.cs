@@ -97,7 +97,9 @@ public class PlayerBehaviour : MonoBehaviour
     {
         SetPlayerState(PlayerState.Dead);
         Instantiate(GameManager.Instance.minionDeadPrefab, transform.position,Quaternion.identity);
+        GameManager.Instance.RemovePlayer();
         Destroy(gameObject);
+        
     }
     public void StartDashSprite(bool flip = false)
     {
