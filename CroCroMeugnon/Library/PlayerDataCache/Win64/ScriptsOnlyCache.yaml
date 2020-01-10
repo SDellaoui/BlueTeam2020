@@ -10,6 +10,13 @@ ScriptsOnlyBuild:
     - PlayerMovementController
     Fabric.Core.Editor.dll:
     - Fabric.PersistentData
+    Fabric.Core.dll:
+    - Fabric.AudioComponent
+    - Fabric.AudioMixer
+    - Fabric.EventListener
+    - Fabric.EventManager
+    - Fabric.FabricManager
+    - Fabric.GroupComponent
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshModifier
     - UnityEngine.AI.NavMeshSurface2d
@@ -64,6 +71,18 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9712}
     - Class: 114
       Script: {instanceID: 9752}
+    - Class: 114
+      Script: {instanceID: 10428}
+    - Class: 114
+      Script: {instanceID: 10430}
+    - Class: 114
+      Script: {instanceID: 10462}
+    - Class: 114
+      Script: {instanceID: 10464}
+    - Class: 114
+      Script: {instanceID: 10472}
+    - Class: 114
+      Script: {instanceID: 10474}
     - Class: 114
       Script: {instanceID: 10746}
     - Class: 114
@@ -683,7 +702,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 72dab27ea4ea16b54d1ee4e1345e9b9e
+      Hash: 1e984a02c5f72340dc2472e12f706880
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Minion_Movement
@@ -773,7 +792,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 200e1611f8d2d248a9906f923a571f19
+      Hash: 30e63ab2f0cb60f143210ec4346fde71
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MinionSpawnerScript
