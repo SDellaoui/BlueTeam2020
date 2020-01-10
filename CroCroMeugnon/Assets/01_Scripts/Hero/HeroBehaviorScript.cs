@@ -172,7 +172,7 @@ public class HeroBehaviorScript : MonoBehaviour
     {
         if (other.gameObject.layer == 8 || other.gameObject.tag == "Minion")
         {
-            Fabric.EventManager.Instance.PostEvent("Gulp", gameObject);
+            Fabric.EventManager.Instance.PostEvent("Dino_Gulp", gameObject);
         }
     }
 
