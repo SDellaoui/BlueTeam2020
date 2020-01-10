@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Fabric.EventManager.Instance.PostEvent("Game_Start");
     }
 
     // Update is called once per frame

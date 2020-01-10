@@ -92,7 +92,7 @@ public class PlayerMovementController : MonoBehaviour
                 }
                 
                 isDashing = true;
-
+                Fabric.EventManager.Instance.PostEvent("Player_Dash", gameObject);
                 Debug.Log("Start Dash !");
             }
             
