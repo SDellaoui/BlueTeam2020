@@ -142,6 +142,7 @@ public class HeroBehaviorScript : MonoBehaviour
         }
 
         Debug.Log(closestPlayer);
+        //Fabric.EventManager.Instance.PostEvent("Play_Dino_Grawl", gameObject);
     }
 
     //void OnCollisionEnter2D(Collision2D other)
