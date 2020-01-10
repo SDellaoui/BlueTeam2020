@@ -46,18 +46,22 @@ public class DashBehaviour : MonoBehaviour
             //Collision avec un autre joueur
             PlayerMovementController collPlayerMovementManager = hit.gameObject.GetComponent<PlayerMovementController>();
             PlayerBehaviour collPlayerBehaviour = hit.gameObject.GetComponent<PlayerBehaviour>();
+            dashedDirection = collPlayerMovementManager.GetDashDirection();
+            //dashedSpeed = collPlayerMovementManager.dashSpeed * (collPlayerBehaviour.strength / playerBehaviour.strength);
+            dashedSpeed = collPlayerMovementManager.dashSpeed * collPlayerBehaviour.strength;
+            dashedTime = startDashedTime * collPlayerBehaviour.strength;
             if (collPlayerMovementManager.GetIsDashing() && !playerMovementController.GetIsDashing())
             {
+                
                 collPlayerMovementManager.CancelDash();
-                dashedDirection = collPlayerMovementManager.GetDashDirection();
-                dashedSpeed = collPlayerMovementManager.dashSpeed * (collPlayerBehaviour.strength / playerBehaviour.strength);
+                playerMovementController.SetIsDashed(true);
 
-                if (playerBehaviour.mass <= collPlayerBehaviour.mass)
-                    playerMovementController.SetIsDashed(true);
             }
-            if (collPlayerMovementManager.GetIsDashing() && playerMovementController.GetIsDashing())
+            else if (collPlayerMovementManager.GetIsDashing() && playerMovementController.GetIsDashing())
             {
                 playerMovementController.CancelDash();
+                if (playerBehaviour.strength < collPlayerBehaviour.strength)
+                    playerMovementController.SetIsDashed(true);
             }
         }
         else if (hit.gameObject.layer == 10)
