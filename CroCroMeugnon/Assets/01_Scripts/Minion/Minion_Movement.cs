@@ -9,6 +9,7 @@ public class Minion_Movement : MonoBehaviour
     GameObject hero;
 
     public float speed = 1.0f;
+    public float chasedSpeed = 2.0f;
     private float timeLeft;
     public float minTime = 1.0f;
     public float maxTime = 3.0f;
@@ -52,7 +53,7 @@ public class Minion_Movement : MonoBehaviour
             {
                 moveDirection = currentPosition - currentHeroPosition;
                 moveDirection.Normalize();
-                moveDirection *= speed;
+                moveDirection *= chasedSpeed;
                 targetPosition = currentPosition + moveDirection;
             }
             transform.position = Vector2.Lerp(currentPosition, targetPosition, Time.deltaTime);
