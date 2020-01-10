@@ -29,6 +29,7 @@ public class DashBehaviour : MonoBehaviour
         if (playerMovementController.GetIsDashed())
         {
             Debug.Log(gameObject.name+" dashed ! ");
+            //Fabric.EventManager.Instance.PostEvent("Dash", gameObject);
             rb.velocity = dashedDirection * playerMovementController.dashSpeed * Time.fixedDeltaTime;
             dashedTime -= Time.fixedDeltaTime;
             if(dashedTime <= 0f)

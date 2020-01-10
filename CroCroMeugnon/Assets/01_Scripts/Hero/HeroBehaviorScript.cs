@@ -14,6 +14,7 @@ public class HeroBehaviorScript : MonoBehaviour
     public float speed;
     public float baseSpeed = 2.0f;
     public float chaseSpeed = 3.0f;
+    public float timeLeftScream = 6.0f;
     private float timeLeft;
     public float minTime = 1.0f;
     public float maxTime = 3.0f;
@@ -55,7 +56,7 @@ public class HeroBehaviorScript : MonoBehaviour
                 _hasTarget = value;
                 if (_hasTarget == true)
                 {
-                    Fabric.EventManager.Instance.PostEvent("Play_Dino_Grawl", gameObject);
+                    Fabric.EventManager.Instance.PostEvent("Dino_Grawl", gameObject);
                 }
             }
         }
@@ -126,6 +127,12 @@ public class HeroBehaviorScript : MonoBehaviour
             sr.color = Color.white;
         }
 
+        if (timeLeft <= 0)
+        {
+            timeLeft = timeLeftScream;
+            Fabric.EventManager.Instance.PostEvent("Dino_Scream", gameObject);
+        }
+
         //if (timeLeft <= 0)
         //{
         //    float move_X = Random.Range(-3.0f, 3.0f);
@@ -135,6 +142,7 @@ public class HeroBehaviorScript : MonoBehaviour
         //    moveDirection *= speed;
         //    timeLeft = Random.Range(minTime, maxTime);
         //}
+
         if (hasTarget && currentTarget != null)
         {
             navAgent.SetDestination(currentTarget.transform.position);
@@ -158,6 +166,14 @@ public class HeroBehaviorScript : MonoBehaviour
         }
 
         Debug.Log(closestPlayer);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == 8 || other.gameObject.tag == "Minion")
+        {
+            Fabric.EventManager.Instance.PostEvent("Gulp", gameObject);
+        }
     }
 
     //void OnCollisionEnter2D(Collision2D other)
