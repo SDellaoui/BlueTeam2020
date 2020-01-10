@@ -43,7 +43,23 @@ public class HeroBehaviorScript : MonoBehaviour
     private GameObject[] minions;
     private GameObject[] targets;
 
-    private bool hasTarget;
+    private bool _hasTarget = false;
+
+    private bool hasTarget
+    {
+        get { return _hasTarget; }
+        set
+        {
+            if (_hasTarget != value)
+            {
+                _hasTarget = value;
+                if (_hasTarget == true)
+                {
+                    Fabric.EventManager.Instance.PostEvent("Play_Dino_Grawl", gameObject);
+                }
+            }
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -142,7 +158,6 @@ public class HeroBehaviorScript : MonoBehaviour
         }
 
         Debug.Log(closestPlayer);
-        //Fabric.EventManager.Instance.PostEvent("Play_Dino_Grawl", gameObject);
     }
 
     //void OnCollisionEnter2D(Collision2D other)
