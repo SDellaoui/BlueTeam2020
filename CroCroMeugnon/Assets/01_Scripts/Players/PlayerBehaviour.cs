@@ -34,6 +34,7 @@ public class PlayerBehaviour : MonoBehaviour
         spriteRenderers[0].sprite = playerSmallSprite[0];
         spriteRenderers[1].sprite = playerBigSprite[0];
         spriteRenderers[2].sprite = playerDeadSprite[0];
+        SetPlayerState(playerState);
     }
 
     // Update is called once per frame
@@ -45,16 +46,16 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(_playerState == PlayerState.Small)
         {
-            strength += 1;
-            mass += 1;
+            strength = 1;
+            mass = 1;
             spriteRenderers[0].gameObject.SetActive(true);
             spriteRenderers[1].gameObject.SetActive(false);
             spriteRenderers[2].gameObject.SetActive(false);
         }
         else if(_playerState == PlayerState.Big)
         {
-            strength -= 1;
-            mass += 1;
+            strength = 2;
+            mass = 2;
             spriteRenderers[0].gameObject.SetActive(false);
             spriteRenderers[1].gameObject.SetActive(true);
             spriteRenderers[2].gameObject.SetActive(false);
@@ -100,11 +101,17 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void StartDashSprite(bool flip = false)
     {
-        spriteRenderers[0].sprite = playerDashSmall[0];
-        spriteRenderers[1].sprite = playerDashBig[0];
-
-        spriteRenderers[0].flipX = flip;
-        spriteRenderers[1].flipX = flip;
+        return;
+        if (flip)
+        {
+            spriteRenderers[0].sprite = playerDashSmall[0];
+            spriteRenderers[1].sprite = playerDashBig[0];
+        }
+        else
+        {
+            spriteRenderers[0].sprite = playerDashSmall[1];
+            spriteRenderers[1].sprite = playerDashBig[1];
+        }
     }
     public void EndDashSprite()
     {

@@ -13,10 +13,13 @@ public class PlayerMovementController : MonoBehaviour
     float dashTime;
     public float dashCooldownTime = 2f;
     float dashCooldown;
+    public float stuntTime = 1f;
 
     bool isDashing = false;
     bool isDashed = false;
+    bool isStunted = false;
     bool preventDash = false;
+
     float inputDeadZone = 0f;
 
     int playerNum;
@@ -79,7 +82,6 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetAxis("Dash" + playerNum.ToString()) >= 0.2f && !preventDash)
             {
                 dashDirection = moveDirection * dashSpeed;
-                //sprite.gameObject.transform.localScale = new Vector2(spriteScale.x,spriteScale.y/2);
                 if(moveDirection.x >= 0)
                 {
                     GetComponent<PlayerBehaviour>().StartDashSprite();
@@ -113,4 +115,5 @@ public class PlayerMovementController : MonoBehaviour
     public bool GetIsDashing() { return isDashing; }
     public bool GetIsDashed() { return isDashed; }
     public void SetIsDashed(bool state) { isDashed = state; }
+    public void SetIsStunted(bool state) { isStunted = state;  }
 }

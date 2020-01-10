@@ -13,7 +13,6 @@ public class DashBehaviour : MonoBehaviour
     float startDashedTime = 0.25f;
     float dashedTime;
     float dashedSpeed;
-    float dashedCoeff;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +33,7 @@ public class DashBehaviour : MonoBehaviour
             dashedTime -= Time.fixedDeltaTime;
             if(dashedTime <= 0f)
             {
+                StartCoroutine("StuntPlayer");
                 playerMovementController.SetIsDashed(false);
                 dashedTime = startDashedTime;
             }
@@ -41,7 +41,8 @@ public class DashBehaviour : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D hit)
     {
-        if (hit.gameObject.layer == 8){
+        if (hit.gameObject.layer == 8)
+        {
             //Collision avec un autre joueur
             PlayerMovementController collPlayerMovementManager = hit.gameObject.GetComponent<PlayerMovementController>();
             PlayerBehaviour collPlayerBehaviour = hit.gameObject.GetComponent<PlayerBehaviour>();
@@ -49,19 +50,36 @@ public class DashBehaviour : MonoBehaviour
             {
                 collPlayerMovementManager.CancelDash();
                 dashedDirection = collPlayerMovementManager.GetDashDirection();
-                //dashedCoeff = collPlayerBehaviour.mass
-                dashedSpeed = collPlayerMovementManager.dashSpeed * collPlayerBehaviour.strength;
-                playerMovementController.SetIsDashed(true);                
+                dashedSpeed = collPlayerMovementManager.dashSpeed * (collPlayerBehaviour.strength / playerBehaviour.strength);
+
+                if (playerBehaviour.mass <= collPlayerBehaviour.mass)
+                    playerMovementController.SetIsDashed(true);
+            }
+            if (collPlayerMovementManager.GetIsDashing() && playerMovementController.GetIsDashing())
+            {
+                playerMovementController.CancelDash();
             }
         }
-        else if(hit.gameObject.layer == 10){
+        else if (hit.gameObject.layer == 10)
+        {
             //Collision avec un mur
             playerMovementController.CancelDash();
         }
-        else if(hit.gameObject.layer == 12)
+        else if (hit.gameObject.layer == 12)
         {
             Debug.Log("hit dino");
             playerBehaviour.Die();
         }
+    }
+
+    IEnumerator StuntPlayer()
+    {
+        playerMovementController.SetIsStunted(true);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(playerMovementController.stuntTime);
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        playerMovementController.SetIsStunted(false);
+        yield return null;
     }
 }

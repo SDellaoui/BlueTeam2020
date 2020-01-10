@@ -290,7 +290,8 @@ MonoBehaviour:
   speed: 350
   dashSpeed: 950
   startDashTime: 0.2
-  dashCooldownTime: 2
+  dashCooldownTime: 0.6
+  stuntTime: 1
 --- !u!114 &8349599852880744782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +320,7 @@ MonoBehaviour:
   playerNum: 1
   strength: 1
   mass: 1
-  bigStateTime: 2
+  bigStateTime: 3
   spriteRenderers:
   - {fileID: 5786357512559898442}
   - {fileID: 122700861488148700}

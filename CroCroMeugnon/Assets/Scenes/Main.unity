@@ -170,10 +170,20 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6071992699249909805, guid: 1ec28bd38cc88ae459063769024e7502,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2284035559809306980, guid: 1ec28bd38cc88ae459063769024e7502,
         type: 3}
       propertyPath: m_Name
       value: Hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284035559809306980, guid: 1ec28bd38cc88ae459063769024e7502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2284035559809306982, guid: 1ec28bd38cc88ae459063769024e7502,
         type: 3}
@@ -258,6 +268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playerNum
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264471329954154567, guid: 9662003d9c4a0fd4a8107e1a68841817,
+        type: 3}
+      propertyPath: playerState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5786357514423440724, guid: 9662003d9c4a0fd4a8107e1a68841817,
         type: 3}
@@ -554,6 +569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinionSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 554234024807162679, guid: e68acc190fb2da446830b5ce3959ccc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68acc190fb2da446830b5ce3959ccc7, type: 3}
 --- !u!1001 &1907609846
@@ -768,80 +788,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9662003d9c4a0fd4a8107e1a68841817, type: 3}
---- !u!1001 &1992110695
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4315214895029134555, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Minion
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134555, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.3344567
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315214895029134565, guid: 2c14daf46a77eb0468c86008a756f3e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2c14daf46a77eb0468c86008a756f3e6, type: 3}
 --- !u!1001 &2372549276099334997
 PrefabInstance:
   m_ObjectHideFlags: 0
