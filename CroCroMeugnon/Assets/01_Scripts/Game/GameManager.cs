@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     bool gameOver = false;
-    int playersCount = 4;
+    bool gameStarted = false;
+    int playersCount = 3;
+    
     public static GameManager Instance { get; private set; }
 
     public GameObject minionDeadPrefab;
@@ -24,24 +26,34 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Fabric.EventManager.Instance.PostEvent("Game_Start");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F5))
+        if(SceneManager.GetActiveScene().name == "Main" && !gameStarted)
         {
-            SceneManager.LoadScene("Main", LoadSceneMode.Single);
-            playersCount = 4;
-            gameOver = false;
             Fabric.EventManager.Instance.PostEvent("Game_Start");
+            
+            gameStarted = true;
+            gameOver = false;
         }
         if (playersCount == 0 && !gameOver)
         {
             Fabric.EventManager.Instance.PostEvent("Game_Over");
+            SceneManager.LoadScene("TitleScreen",LoadSceneMode.Single);
+            playersCount = 3;
             gameOver = true;
+            gameStarted = false;
         }
     }
     public void RemovePlayer() { playersCount -= 1; }
+    public void KillEntity(GameObject entity)
+    {
+        if (entity.layer == 8)
+            playersCount -= 1;
+        Instantiate(GameObject.Find("MinionSpawner").GetComponent<MinionSpawnerScript>().minionDead, entity.transform.position, Quaternion.identity);
+        Destroy(entity);
+    }
 }

@@ -70,11 +70,13 @@ public class DashBehaviour : MonoBehaviour
             //Collision avec un mur
             playerMovementController.CancelDash();
         }
+        /*
         else if (hit.gameObject.layer == 12)
         {
             Debug.Log("hit dino");
             playerBehaviour.Die();
         }
+        */
     }
 
     IEnumerator StuntPlayer()

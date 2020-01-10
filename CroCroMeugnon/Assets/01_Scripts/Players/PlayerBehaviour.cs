@@ -29,7 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
         playerSmallSprite = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString());
         playerBigSprite = Resources.LoadAll<Sprite>("Sprites/Giant_Player" + playerNum.ToString());
         playerDashSmall = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString()+"_dash");
-        playerDashBig = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString() + "Big_dash");
+        playerDashBig = Resources.LoadAll<Sprite>("Sprites/Player" + playerNum.ToString() + "_Big_dash");
         playerDeadSprite = Resources.LoadAll<Sprite>("Sprites/Dead_minion");
         spriteRenderers[0].sprite = playerSmallSprite[0];
         spriteRenderers[1].sprite = playerBigSprite[0];
@@ -93,6 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    /*
     public void Die()
     {
         SetPlayerState(PlayerState.Dead);
@@ -101,9 +102,10 @@ public class PlayerBehaviour : MonoBehaviour
         Destroy(gameObject);
         
     }
+    */
     public void StartDashSprite(bool flip = false)
     {
-        return;
+        Debug.Log("Start Dash Sprite");
         if (flip)
         {
             spriteRenderers[0].sprite = playerDashSmall[0];

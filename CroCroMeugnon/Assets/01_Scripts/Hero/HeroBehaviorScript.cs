@@ -133,16 +133,6 @@ public class HeroBehaviorScript : MonoBehaviour
             Fabric.EventManager.Instance.PostEvent("Dino_Scream", gameObject);
         }
 
-        //if (timeLeft <= 0)
-        //{
-        //    float move_X = Random.Range(-3.0f, 3.0f);
-        //    float move_Y = Random.Range(-3.0f, 3.0f);
-        //    moveDirection = new Vector2(move_X, move_Y);
-        //    moveDirection.Normalize();
-        //    moveDirection *= speed;
-        //    timeLeft = Random.Range(minTime, maxTime);
-        //}
-
         if (hasTarget && currentTarget != null)
         {
             navAgent.SetDestination(currentTarget.transform.position);
@@ -165,14 +155,16 @@ public class HeroBehaviorScript : MonoBehaviour
             }
         }
 
-        Debug.Log(closestPlayer);
+        //Debug.Log(closestPlayer);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.layer == 8 || other.gameObject.tag == "Minion")
         {
+            GameManager.Instance.KillEntity(other.gameObject);
             Fabric.EventManager.Instance.PostEvent("Dino_Gulp", gameObject);
+            
         }
     }
 

@@ -124,7 +124,7 @@ MonoBehaviour:
   _dynamicAudioClipUnloadDelay: 0
   _dynamicAsyncAudioClipLoading: 0
   _audioClipAssetPath: 0
-  _delay: 0
+  _delay: 1.5
   _delayInBeats: 0
   _loop: 1
   _ignoreNativeLoop: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.4216965
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.34673688
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -1655,7 +1655,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.57543993
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -1777,7 +1777,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.60255957
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0

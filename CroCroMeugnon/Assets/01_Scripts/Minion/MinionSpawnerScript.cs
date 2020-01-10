@@ -5,6 +5,8 @@ using UnityEngine;
 public class MinionSpawnerScript : MonoBehaviour
 {
     public GameObject minion;
+    public GameObject minionDead;
+
     Vector2 spawnLocation;
     public float spawnRate = 5.0f;
     public float maxMinions = 20.0f;

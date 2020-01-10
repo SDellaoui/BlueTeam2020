@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4315214895029134554}
   - component: {fileID: -2890772035018437805}
   - component: {fileID: -4294008851384977240}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Minion
   m_TagString: Minion
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  chasedSpeed: 2
   minTime: 3
   maxTime: 5
   minDistanceToHero: 5
@@ -104,7 +105,7 @@ GameObject:
   - component: {fileID: 4315214895828926427}
   - component: {fileID: 4315214895828926426}
   - component: {fileID: 5464454985736618361}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

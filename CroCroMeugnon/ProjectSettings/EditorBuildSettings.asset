@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: bc1c5ac1990403f45bbbbd81cdbeb976
+  - enabled: 1
+    path: Assets/Scenes/RulesScreen.unity
+    guid: 744ed06e59e3eee4dbfcb453ee4bb7ca
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: c31e3135f2e815943a967d78f2199293
   m_configObjects: {}

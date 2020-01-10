@@ -59,16 +59,18 @@ public class Minion_Movement : MonoBehaviour
             transform.position = Vector2.Lerp(currentPosition, targetPosition, Time.deltaTime);
         }
     }
-
+    /*
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Hero")
+        if (other.gameObject.layer == 12)
         {
             if (gameObject != null)
             {
-                Instantiate(GameManager.Instance.minionDeadPrefab, transform.position, Quaternion.identity);
+                Instantiate(GameObject.Find("MinionSpawner").GetComponent<MinionSpawnerScript>().minionDead, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
+            
         }
     }
+    */
 }
