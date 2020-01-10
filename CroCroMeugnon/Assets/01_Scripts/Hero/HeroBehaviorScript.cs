@@ -21,15 +21,24 @@ public class HeroBehaviorScript : MonoBehaviour
 
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 currentPosition;
-
+    
     GameObject target;
     GameObject currentTarget;
+    GameObject player;
+    GameObject closestPlayer;
+
     private Vector2 targetPosition;
     private Vector2 currentTargetPosition;
     private Vector2 directionToTarget;
     private float distanceToTarget;
     private float currentTargetDistance;
 
+    private Vector2 playerPosition;
+    private Vector2 closestPlayerPosition;
+    private Vector2 directionToPlayer;
+    private float distanceToPlayer;
+    private float closestPlayerDistance;
+    
     private GameObject[] players;
     private GameObject[] minions;
     private GameObject[] targets;
@@ -45,6 +54,7 @@ public class HeroBehaviorScript : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         currentTargetDistance = 100.0f;
+        closestPlayerDistance = 100.0f;
         hasTarget = false;
     }
 
@@ -57,7 +67,7 @@ public class HeroBehaviorScript : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         minions = GameObject.FindGameObjectsWithTag("Minion");
         targets = players.Concat(minions).ToArray();
-        
+
         foreach (GameObject target in targets)
         {
             if (target != null)
@@ -72,8 +82,20 @@ public class HeroBehaviorScript : MonoBehaviour
                 }
             }
         }
-        Debug.Log(currentTargetDistance);
-        Debug.Log(currentTarget);
+        foreach (GameObject player in players)
+        {
+            if (player != null)
+            {
+                playerPosition = player.transform.position;
+                directionToPlayer = playerPosition - currentPosition;
+                distanceToPlayer = directionToPlayer.magnitude;
+                if (distanceToPlayer < closestPlayerDistance)
+                {
+                    closestPlayerDistance = distanceToPlayer;
+                    closestPlayer = player;
+                }
+            }
+        }
         if (currentTargetDistance <= minDistanceToTarget && currentTarget != null)
         {
             hasTarget = true;
@@ -88,26 +110,48 @@ public class HeroBehaviorScript : MonoBehaviour
             sr.color = Color.white;
         }
 
-        if (timeLeft <= 0)
-        {
-            float move_X = Random.Range(-3.0f, 3.0f);
-            float move_Y = Random.Range(-3.0f, 3.0f);
-            moveDirection = new Vector2(move_X, move_Y);
-            moveDirection.Normalize();
-            moveDirection *= speed;
-            timeLeft = Random.Range(minTime, maxTime);
-        }
+        //if (timeLeft <= 0)
+        //{
+        //    float move_X = Random.Range(-3.0f, 3.0f);
+        //    float move_Y = Random.Range(-3.0f, 3.0f);
+        //    moveDirection = new Vector2(move_X, move_Y);
+        //    moveDirection.Normalize();
+        //    moveDirection *= speed;
+        //    timeLeft = Random.Range(minTime, maxTime);
+        //}
         if (hasTarget && currentTarget != null)
         {
             navAgent.SetDestination(currentTarget.transform.position);
+            navAgent.speed = speed;
             sr.flipX = ((currentTarget.transform.position.x - currentPosition.x) > 0)?false: true ;
         }
         else
         {
-            navAgent.ResetPath();
-            transform.Translate(moveDirection * Time.deltaTime);
-            sr.flipX = ((moveDirection.x - currentPosition.x) > 0) ? false : true;
+            if (closestPlayer != null)
+            {
+                navAgent.speed = speed;
+                //transform.Translate(moveDirection * Time.deltaTime);
+                navAgent.SetDestination(closestPlayer.transform.position);
+                sr.flipX = ((moveDirection.x - currentPosition.x) > 0) ? false : true;
+            }
+            else
+            {
+                navAgent.ResetPath();
+                closestPlayerDistance = 100.0f;
+            }
         }
 
+        Debug.Log(closestPlayer);
     }
+
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.layer == 10)
+    //    {
+    //        Debug.Log("Wall hit");
+    //        moveDirection = Vector2.zero - currentPosition;
+    //        moveDirection.Normalize();
+    //        moveDirection *= speed;
+    //    }
+    //}
 }
