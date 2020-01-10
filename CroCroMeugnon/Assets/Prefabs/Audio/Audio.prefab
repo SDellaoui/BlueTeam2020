@@ -105,7 +105,7 @@ MonoBehaviour:
     _velocity: 0
   _overrideSpatializeProperty: 0
   _probability: 100
-  _multipleInstancesPerGameObject: 1
+  _multipleInstancesPerGameObject: 0
   _componentVirtualization: 0
   _overrideVolumeThreshold: 0
   _volumeThreshold: 1
@@ -577,13 +577,13 @@ MonoBehaviour:
   _pan2DRandomization: 0
   _override3DProperties: 0
   _priority: 128
-  _panLevel: 1
+  _panLevel: 0.549
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
   _maxDistance: 500
   _minDistance: 1
-  _rolloffMode: 0
+  _rolloffMode: 1
   _customCurvesType: 0
   _customCurvesName: 
   _overrideFadeProperties: 0
@@ -781,7 +781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc407e8679377004daddc5b6528d658c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
 --- !u!1 &5419840231817020477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1471,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.46773517
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
